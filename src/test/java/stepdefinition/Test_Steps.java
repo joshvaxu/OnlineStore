@@ -46,13 +46,13 @@ public class Test_Steps {
 
         // Enter Username on the element found by above desc.
 
-        driver.findElement(By.id("log")).sendKeys("testuser_1"); 
+        driver.findElement(By.id("log")).sendKeys("joshvaxu");
 
         // Find the element that's ID attribute is 'pwd' (Password)
 
         // Enter Password on the element found by the above desc.
 
-        driver.findElement(By.id("pwd")).sendKeys("Test@123");
+        driver.findElement(By.id("pwd")).sendKeys("@x*^62Y!8Eir21WA");
 
         // Now submit the form. WebDriver will find the form for us from the element 
 
@@ -62,19 +62,30 @@ public class Test_Steps {
 
 	@Then("^Message displayed Login Successfully$")
 	public void message_displayed_Login_Successfully() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+
+		// Print a Log In message to the screen
+
+		System.out.println("Login Successfully");
 	}
 
 	@When("^User LogOut from the Application$")
 	public void user_LogOut_from_the_Application() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+
+		// Find the element that's ID attribute is 'account_logout' (Log Out)
+
+		driver.findElement (By.xpath(".//*[@id='account_logout']/a")).click();
+
 	}
 
 	@Then("^Message displayed LogOut Successfully$")
 	public void message_displayed_LogOut_Successfully() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+
+		// Print a Log In message to the screen
+
+		System.out.println("LogOut Successfully");
+
+		// Close the driver
+
+		driver.quit();
 	}
 }
